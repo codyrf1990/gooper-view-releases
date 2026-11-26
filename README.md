@@ -13,7 +13,8 @@ and lets you and your friends chat, talk and watch each other's streams on a ser
 2. Run it. Windows will say **"Windows protected your PC"** because the installer isn't signed.
    Click **More info**, then **Run anyway**.
 3. The app opens and walks you through first-time setup. It finds Tarkov's log folder by itself
-   (BSG launcher or Steam). If it can't, it asks you to pick the folder.
+   (BSG launcher or Steam). If it can't, it asks you to pick the folder. No Tarkov on this PC (you only
+   want chat, voice and streams)? Click **Skip for now**.
 
 Needs Windows 10 or 11. Sharing Tarkov's sound in a stream needs Windows 11.
 
@@ -31,7 +32,7 @@ In the app, open **Settings › Servers › Host servers** and follow the five s
 
 1. **Make a free Cloudflare account** (the button opens the sign-up page). Verify the email Cloudflare sends.
 2. **Make the token.** The button opens Cloudflare with everything filled in (four permissions: Workers Scripts,
-   Account Settings, Realtime, Account Analytics). Click *Continue to summary*, *Create Token*, then *Copy*.
+   Account Settings, Realtime, Account Analytics). Click *Continue to summary*, *Create Token*, then the copy icon next to the token (not the “Copy” button under it: that one copies a command).
 3. **Paste the token and click Connect.** Setup takes about a minute. The token stays on your PC, encrypted by Windows.
 4. **GIFs (optional).** Paste a free GIPHY key, or skip.
 5. **Done.** Go to the **Servers** tab and click **Make a server**.
@@ -64,9 +65,11 @@ Friends don't need a Cloudflare account. Only the host does.
 
 ## If something goes wrong
 
-- **The app can't find Tarkov's logs:** start Tarkov once, then pick the Logs folder in **Settings › Logs**.
-- **Setup stops at "Checking your address":** a new Cloudflare address can take a few minutes. Wait, then press
-  Connect again.
+- **The app can't find Tarkov's logs:** open **Settings › Logs** and pick the Logs folder. BSG launcher:
+  it's inside the Game directory shown in Settings › Game Settings. Steam: right-click Escape from
+  Tarkov › Manage › Browse local files › build › Logs. The app also finds it by itself once Tarkov has run.
+- **Setup stops at "Checking your address":** a new Cloudflare address can take two to three minutes; the app keeps
+  checking by itself.
 - **A friend's stream freezes or won't connect:** it is usually a home router blocking the connection. Try again,
   or have the other person host.
 
