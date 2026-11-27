@@ -1,82 +1,52 @@
+
 # Gooper View
 
-A free companion app for Escape from Tarkov on Windows. It tracks your tasks live from the game's own log files,
-and lets you and your friends chat, talk and watch each other's streams on a server you host yourself.
+A free Escape from Tarkov companion for Windows. It tracks your tasks live while you play, and gives you and your
+friends a private server for chat, voice and watching each other's streams.
 
-- Free and non-commercial. Not made by or connected to Battlestate Games.
-- It only reads Tarkov's log files and public tarkov.dev data. It never touches the game, its memory or your account.
-- No sign-up. No account with us. Nothing you do is sent to the author.
+- Free, no sign-up, nothing sent to us. Not made by or connected to Battlestate Games.
+- It only reads Tarkov's log files and public tarkov.dev data. It never touches the game or your account.
 
-## 1. Install
+## Install
 
 1. Download **Gooper-View-Setup-x.y.z.exe** from the [latest release](../../releases/latest).
-2. Run it. Windows will say **"Windows protected your PC"** because the installer isn't signed.
-   Click **More info**, then **Run anyway**.
-3. The app opens and walks you through first-time setup. It finds Tarkov's log folder by itself
-   (BSG launcher or Steam). If it can't, it asks you to pick the folder. No Tarkov on this PC (you only
-   want chat, voice and streams)? Click **Skip for now**.
+2. Run it. Windows says **"Windows protected your PC"** (the installer isn't signed): click **More info**, then
+   **Run anyway**.
+3. Follow the short setup. It finds Tarkov's logs by itself. Only here for chat, voice and streams? Click
+   **Skip for now**.
 
-Needs Windows 10 or 11. Sharing Tarkov's sound in a stream needs Windows 11.
+Windows 10 or 11. The app updates itself (never during a raid).
 
-## 2. Use it
+## Join a friend's server
 
-Play Tarkov as normal. The board fills in as the game writes its logs: your tasks, what's next, maps, raids.
-A second monitor is the best place for it. Nothing is ever drawn over the game.
+1. Install Gooper View (above).
+2. Open the invite link your friend sends you and click **Join**.
 
-## 3. Host a server for your friends (optional)
+That's it: no account needed. Click a voice channel to talk, **Go live** to share your game, **View** to watch a
+friend.
 
-A server gives up to 10 people text chat, voice and streams. It runs on **your own free Cloudflare account**, so
-nobody else holds your chat. Messages are encrypted on your PC before they leave it.
+## Host your own server (optional)
 
-In the app, open **Settings › Servers › Host servers** and follow the five steps:
+A server holds up to 10 people. It runs on **your own free Cloudflare account**, and messages are encrypted on your
+PC first. In the app: **Settings › Servers › Host servers**, then follow the steps:
 
-1. **Make a free Cloudflare account** (the button opens the sign-up page). Verify the email Cloudflare sends.
-2. **Make the token.** The button opens Cloudflare with everything filled in (four permissions: Workers Scripts,
-   Account Settings, Realtime, Account Analytics). Click *Continue to summary*, *Create Token*, then the copy icon next to the token (not the “Copy” button under it: that one copies a command).
-3. **Paste the token and click Connect.** Setup takes about a minute. The token stays on your PC, encrypted by Windows.
-4. **GIFs (optional).** Paste a free GIPHY key, or skip.
-5. **Done.** Go to the **Servers** tab and click **Make a server**.
+1. Make a free Cloudflare account (the button opens the page) and verify the email.
+2. Click the button to make the token, then *Continue to summary*, *Create Token*, and copy the token with the
+   **copy icon** next to it (not the "Copy" button under it).
+3. Paste it and click **Connect** (about a minute).
+4. Go to the **Servers** tab, **Make a server**, then **Invite people › Copy link** and send it to your friends.
 
-Good to know:
-
-- Cloudflare's free plan covers 1,000 GB of streaming a month. The app warns you and stops streams before you'd go over.
-- **Forget** in Settings removes the token from your PC. The server itself stays on your Cloudflare account until you
-  delete it there (Workers & Pages › gooper-view-servers).
-
-## 4. Invite friends
-
-1. Your friend installs Gooper View first (this page).
-2. In your server, click its name, then **Invite people**, then **Copy link**, and send it to them.
-3. They open the link and click **Join**. Nothing joins by itself.
-
-Friends don't need a Cloudflare account. Only the host does.
-
-## 5. Streams and voice
-
-- **Voice:** click a voice channel. Your mic is only on while you're in voice.
-- **Go live:** click Go live and pick a window or screen. Nothing is sent until someone watches.
-- **Watch:** click View on a friend who is live. Their stream opens in its own window, so the chat stays in view.
-
-## Updates and removing it
-
-- The app updates itself from this page (never in the middle of a raid).
-- To remove it: Windows Settings › Apps › Gooper View › Uninstall. Your settings stay in
-  `%APPDATA%\Gooper View`; delete that folder to remove everything.
+Cloudflare's free plan covers 1,000 GB of streaming a month; the app stops streams before you'd go over.
 
 ## If something goes wrong
 
-- **The app can't find Tarkov's logs:** open **Settings › Logs** and pick the Logs folder. BSG launcher:
-  it's inside the Game directory shown in Settings › Game Settings. Steam: right-click Escape from
-  Tarkov › Manage › Browse local files › build › Logs. The app also finds it by itself once Tarkov has run.
-- **Setup stops at "Checking your address":** a new Cloudflare address can take two to three minutes; the app keeps
-  checking by itself.
-- **A friend's stream freezes or won't connect:** it is usually a home router blocking the connection. Try again,
-  or have the other person host.
+- **No tasks showing:** Settings › Logs › pick Tarkov's Logs folder (BSG launcher: inside the game folder;
+  Steam: right-click Tarkov › Manage › Browse local files › build › Logs).
+- **A stream freezes or won't connect:** usually a home router. Try again, or have the other person host.
+- **Anything else:** [open an issue](../../issues) and say what happened. Attaching
+  `%APPDATA%\Gooper View\logs\main.log` helps.
 
-## Problems?
-
-[Open an issue here](../../issues). Say what you did and what happened. The app's log is in
-`%APPDATA%\Gooper View\logs\main.log` if you want to attach it.
+To remove it: Windows Settings › Apps › Gooper View › Uninstall (your settings stay in `%APPDATA%\Gooper View`).
 
 ## Credits
 
