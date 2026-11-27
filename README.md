@@ -25,6 +25,10 @@ Windows 10 or 11. The app updates itself (never during a raid).
 That's it: no account needed. Click a voice channel to talk, **Go live** to share your game, **View** to watch a
 friend.
 
+Streams open in their own window, so the chat stays in view. Switch at the top between **Focus** (one big
+picture), **Grid** (everyone the same size) and **Squad** (the stream with that player's raid map and tasks).
+Double-click a stream for full screen; Esc leaves.
+
 ## Host your own server (optional)
 
 A server holds up to 10 people. It runs on **your own free Cloudflare account**, and messages are encrypted on your
